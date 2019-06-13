@@ -1,0 +1,13 @@
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\bin\Debug\PantallaAdminRestau.exe.config
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\bin\Debug\PantallaAdminRestau.exe
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\bin\Debug\PantallaAdminRestau.pdb
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\bin\Debug\PantallaAdminRestau.xml
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.vbprojAssemblyReference.cache
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.Restaurante.resources
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.Resources.resources
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.vbproj.GenerateResource.cache
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.vbproj.CoreCompileInputs.cache
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.exe
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.xml
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.pdb
+C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.AgregarComida.resources
