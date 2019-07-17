@@ -12,3 +12,8 @@ C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRe
 C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.pdb
 C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.AgregarComida.resources
 C:\Users\Alumno.BELEN-GUCCI-TIC\source\repos\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.Home.resources
+C:\Users\Alumno\Desktop\PepitosYa\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.vbprojAssemblyReference.cache
+C:\Users\Alumno\Desktop\PepitosYa\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.exe
+C:\Users\Alumno\Desktop\PepitosYa\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.xml
+C:\Users\Alumno\Desktop\PepitosYa\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.pdb
+C:\Users\Alumno\Desktop\PepitosYa\PantallaAdminRestau\PantallaAdminRestau\obj\Debug\PantallaAdminRestau.exe.config

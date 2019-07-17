@@ -5,4 +5,9 @@
         Home.ShowDialog()
 
     End Sub
+
+    Private Sub btregistro_Click(sender As Object, e As EventArgs) Handles btregistro.Click
+        Registrarse.ShowDialog()
+
+    End Sub
 End Class

@@ -29,6 +29,8 @@ Partial Class Restaurante
         Me.Lblcontra = New System.Windows.Forms.Label()
         Me.lblBienvenido = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btregistro = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TBcorreo
@@ -79,12 +81,33 @@ Partial Class Restaurante
         Me.Button1.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Teal
-        Me.Button1.Location = New System.Drawing.Point(192, 315)
+        Me.Button1.Location = New System.Drawing.Point(181, 314)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(124, 28)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Iniciar sesion"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'btregistro
+        '
+        Me.btregistro.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btregistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btregistro.ForeColor = System.Drawing.Color.Teal
+        Me.btregistro.Location = New System.Drawing.Point(181, 371)
+        Me.btregistro.Name = "btregistro"
+        Me.btregistro.Size = New System.Drawing.Size(124, 28)
+        Me.btregistro.TabIndex = 6
+        Me.btregistro.Text = "Registrarse"
+        Me.btregistro.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(237, 349)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(13, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "o"
         '
         'Restaurante
         '
@@ -92,6 +115,8 @@ Partial Class Restaurante
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(485, 439)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btregistro)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblBienvenido)
         Me.Controls.Add(Me.Lblcontra)
@@ -112,4 +137,6 @@ Partial Class Restaurante
     Friend WithEvents Lblcontra As Label
     Friend WithEvents lblBienvenido As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents btregistro As Button
+    Friend WithEvents Label1 As Label
 End Class
