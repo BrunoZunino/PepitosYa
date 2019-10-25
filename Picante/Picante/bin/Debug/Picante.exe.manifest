@@ -114,14 +114,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Picante.exe" size="112616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Picante.exe" size="114152">
       <assemblyIdentity name="Picante" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BojXWxyhpFHTHsiJovgvkxza064Qniad1Ao774B7t08=</dsig:DigestValue>
+        <dsig:DigestValue>RFLUgoD+ZFu7AxleALDXw2cGlcbKmS5jjj/pV5Nf+xo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

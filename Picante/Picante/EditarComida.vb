@@ -1,4 +1,4 @@
-﻿Public Class EditarComida
+Public Class EditarComida
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Close()
@@ -59,7 +59,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim nombre = TbxNombre.Text
-        Dim precio = TbxPrecio.Text
+        Dim precio As Integer = TbxPrecio.Text
         Dim tipo = TbxTipo.Text
         Dim tiempo = TxbTiempo.Text
         Dim img = TxbImg.Text
@@ -118,14 +118,19 @@
             If resultado < 0 Then
                 Throw New Exception("Error en la carga de datos")
             End If
-
+            conexion.Close()
             For i As Integer = 0 To (lista_ing.Count() - 1)
+                conexion = New Npgsql.NpgsqlConnection()
+                conexion = clasecnn.AbrirConexion()
+
+                cmd = New Npgsql.NpgsqlCommand()
+                cmd.Connection = conexion
 
                 Dim cadenaComando2 = "INSERT INTO ingredientescomida (codigo, ingredientes) VALUES (@codigo, @ingredientes); "
                 cmd.CommandText = cadenaComando2
 
                 cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = _comidaEditar.Codigo
-                cmd.Parameters.Add("@ingredientes", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = lista_ing(i).ToString
+                cmd.Parameters.Add("@ingredientes", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = lista_ing(i)
 
 
                 resultado = cmd.ExecuteNonQuery()
@@ -133,21 +138,27 @@
                 If resultado < 0 Then
                     Throw New Exception("Error en la carga de datos")
                 End If
-
+                conexion.Close()
             Next
+
+            conexion = New Npgsql.NpgsqlConnection()
+            conexion = clasecnn.AbrirConexion()
+
+            cmd = New Npgsql.NpgsqlCommand()
+            cmd.Connection = conexion
 
             Dim cadenaComando3 = "UPDATE restaurantecomida SET precio = @precio, tiempo_preparacion = @tiempo_preparacion WHERE codigo = @codigo and rut = @rut; "
             cmd.CommandText = cadenaComando3
 
             cmd.Parameters.Add("@rut", NpgsqlTypes.NpgsqlDbType.Integer).Value = _comidaEditar.Rut
             cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = _comidaEditar.Codigo
-            cmd.Parameters.Add("@precio", NpgsqlTypes.NpgsqlDbType.Integer).Value = precio
-            cmd.Parameters.Add("@tiempo_preparacion", NpgsqlTypes.NpgsqlDbType.Integer).Value = tiempopreparacion
+            cmd.Parameters.Add("@precio", NpgsqlTypes.NpgsqlDbType.Integer).Value = _comidaEditar.Precio
+            cmd.Parameters.Add("@tiempo_preparacion", NpgsqlTypes.NpgsqlDbType.Integer).Value = _comidaEditar.TiempoPreparacion
 
             resultado = cmd.ExecuteNonQuery()
 
             If resultado >= 0 Then
-                Label9.Text = "Alta exitosa"
+                Label9.Text = "Modificacion exitosa"
                 NotificacionCS.ShowDialog()
             Else
                 Throw New Exception("Error en la carga de datos")
@@ -159,6 +170,61 @@
             Label9.Text = ex.Message
         End Try
 
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        Dim codigo = Listar_comidas.comida_selecionada.Codigo
+        Dim rut = Listar_comidas.comida_selecionada.Rut
+        Dim resultado As Integer
+
+        Dim clasecnn = New conexionPGSQL
+        Dim conexion As New Npgsql.NpgsqlConnection()
+        conexion = clasecnn.AbrirConexion()
+
+        Dim cmd = New Npgsql.NpgsqlCommand()
+        cmd.Connection = conexion
+
+        Dim cadenaComando = "DELETE from restaurantecomida WHERE rut = @rut and codigo = @codigo; "
+        cmd.CommandText = cadenaComando
+
+        cmd.Parameters.Add("@rut", NpgsqlTypes.NpgsqlDbType.Integer).Value = rut
+        cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = codigo
+
+        resultado = cmd.ExecuteNonQuery()
+
+        If resultado < 0 Then
+            Throw New Exception("Error en la carga de datos")
+        End If
+
+        Dim cadenaComando2 = "DELETE from ingredientescomida WHERE codigo = @codigo;"
+        cmd.CommandText = cadenaComando2
+
+        cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = codigo
+
+        resultado = cmd.ExecuteNonQuery()
+
+        If resultado < 0 Then
+            Throw New Exception("Error en la carga de datos")
+        End If
+
+        Dim cadenaComando3 = "DELETE From comida Where codigo = @codigo;"
+
+        cmd.CommandText = cadenaComando3
+
+        cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = codigo
+
+        resultado = cmd.ExecuteNonQuery()
+
+        If resultado >= 0 Then
+            Label9.Text = "Eliminacion exitosa"
+            NotificacionCS.ShowDialog()
+        Else
+            Throw New Exception("Error en la carga de datos")
+        End If
+
+        cmd.Parameters.Clear()
 
     End Sub
 End Class

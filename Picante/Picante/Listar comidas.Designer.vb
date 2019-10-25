@@ -31,7 +31,7 @@ Partial Class Listar_comidas
         Me.precio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.tiempo_preparacion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ingredientes = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.nada = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.imagen = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -39,12 +39,13 @@ Partial Class Listar_comidas
         Me.cerrarsesion = New System.Windows.Forms.Button()
         Me.Edit = New System.Windows.Forms.Button()
         Me.LabelError = New System.Windows.Forms.Label()
+        Me.rut = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ListComidas
         '
-        Me.ListComidas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id, Me.nombre, Me.tipo, Me.precio, Me.tiempo_preparacion, Me.ingredientes, Me.nada})
+        Me.ListComidas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id, Me.nombre, Me.tipo, Me.precio, Me.tiempo_preparacion, Me.ingredientes, Me.imagen, Me.rut})
         Me.ListComidas.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.ListComidas.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
         Me.ListComidas.Location = New System.Drawing.Point(16, 95)
@@ -83,10 +84,10 @@ Partial Class Listar_comidas
         Me.ingredientes.Text = "Ingredientes"
         Me.ingredientes.Width = 203
         '
-        'nada
+        'imagen
         '
-        Me.nada.Text = "Imgen"
-        Me.nada.Width = 169
+        Me.imagen.Text = "Imgen"
+        Me.imagen.Width = 169
         '
         'Button2
         '
@@ -167,6 +168,10 @@ Partial Class Listar_comidas
         Me.LabelError.Size = New System.Drawing.Size(0, 13)
         Me.LabelError.TabIndex = 15
         '
+        'rut
+        '
+        Me.rut.Text = "rut"
+        '
         'Listar_comidas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -203,7 +208,8 @@ Partial Class Listar_comidas
     Friend WithEvents tiempo_preparacion As ColumnHeader
     Friend WithEvents cerrarsesion As Button
     Friend WithEvents ingredientes As ColumnHeader
-    Friend WithEvents nada As ColumnHeader
+    Friend WithEvents imagen As ColumnHeader
     Friend WithEvents Edit As Button
     Friend WithEvents LabelError As Label
+    Friend WithEvents rut As ColumnHeader
 End Class

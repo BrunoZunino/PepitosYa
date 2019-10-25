@@ -1,4 +1,4 @@
-﻿Imports Npgsql
+Imports Npgsql
 Public Class Listar_comidas
     Public lista_comidas As List(Of AltaComida)
 
@@ -38,8 +38,9 @@ Public Class Listar_comidas
         listado = New List(Of String)
         lista_comidas = New List(Of AltaComida)
 
+
         Try
-            Dim cadenaComando = (" SELECT * FROM comidasOrdenadas ")
+            Dim cadenaComando = (" SELECT * FROM comidasordenadas2 ")
 
             Dim clasecnn = New conexionPGSQL
             Dim conexion As New NpgsqlConnection()
@@ -63,6 +64,7 @@ Public Class Listar_comidas
                     Dim tiempo As String = lector(4).ToString
                     Dim ingrediente As String = lector(5).ToString
                     Dim imagen As String = lector(6).ToString
+                    Dim rut As String = lector(7).ToString
 
                     Dim counter = lista_comidas.Count()
 
@@ -74,6 +76,7 @@ Public Class Listar_comidas
                         comida.Tipo = tipo
                         comida.Precio = precio
                         comida.TiempoPreparacion = tiempo
+                        comida.Rut = rut
 
                         lista_comidas.Add(comida)
 
@@ -91,6 +94,7 @@ Public Class Listar_comidas
                         comida.Tipo = tipo
                         comida.Precio = precio
                         comida.TiempoPreparacion = tiempo
+                        comida.Rut = rut
 
                         lista_comidas.Add(comida)
 
@@ -113,6 +117,7 @@ Public Class Listar_comidas
                 ListComidas.Items(i).SubItems.Add(lista_comidas(i).TiempoPreparacion)
                 ListComidas.Items(i).SubItems.Add(lista_comidas(i).Listar)
                 ListComidas.Items(i).SubItems.Add(lista_comidas(i).Imagen)
+                ListComidas.Items(i).SubItems.Add(lista_comidas(i).Rut)
             Next
 
         Catch ex As Exception
@@ -127,7 +132,8 @@ Public Class Listar_comidas
             item = ListComidas.SelectedIndices.Item(0)
 
             Dim i As Integer = 0
-
+            comida_selecionada = New AltaComida()
+            comida_selecionada.Rut = 5
             While (i < lista_comidas.Count())
 
                 If lista_comidas(i).Codigo = item Then
